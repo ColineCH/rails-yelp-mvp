@@ -8,8 +8,13 @@
           <%= @restaurant.address %>
           <%= @restaurant.phone_number %>
         </p>
+
+        <% @restaurant.reviews.each do |review| %>
+          <p>Review: <%= review.content %> - Rating: <%= "*" * review.rating %></p>
+          <% end %>
       </div>
       <h4 class= "text-center"><%= link_to "List of restaurants", restaurants_path %></h4>
+      <h4 class= "text-center"><%= link_to "Add a review to this restaurant", new_restaurant_review_path(@restaurant) %></h4>
     </div>
   </div>
 </div>
