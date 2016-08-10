@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-2">
+      <h1 class= "text-center"><%= @restaurant.name %></h1>
+      <div>
+        <p>Type of food: <em><%= @restaurant.category %></em></p>
+        <p>
+          <%= @restaurant.address %>
+          <%= @restaurant.phone_number %>
+        </p>
+      </div>
+      <h4 class= "text-center"><%= link_to "List of restaurants", restaurants_path %></h4>
+    </div>
+  </div>
+</div>
+
+
