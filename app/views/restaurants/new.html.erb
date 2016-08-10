@@ -1,8 +1,15 @@
-<%= simple_form_for @restaurant do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :phone_number %>
-  <%= f.input :category, collection: Restaurant::CATEGORY, prompt: "Select a category" %>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+<div class="container padded">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h5>Complete the form to add a new restaurant</h5>
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category, collection: Restaurant::CATEGORY, prompt: "Select a category" %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 

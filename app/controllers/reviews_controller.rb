@@ -11,13 +11,13 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render :new
+      render 'restaurants/show'
     end
   end
 
   private
   def set_restaurant
-     @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   def review_params
